@@ -53,6 +53,9 @@ public class Device {
             case "iPod5,1":                                  return Version.iPodTouch5Gen
             case "iPod7,1":                                  return Version.iPodTouch6Gen
             
+            /*** AppleTV ***/
+            case "AppleTV5,1", "AppleTV5,2", "AppleTV5,3":   return Version.AppleTV
+            
             /*** Simulator ***/
             case "i386", "x86_64":                           return Version.Simulator
 
@@ -94,6 +97,9 @@ public class Device {
             "iPod5,1",
             "iPod7,1":
                                                             return Type.iPod
+            
+            case "AppleTV5,1", "AppleTV5,2", "AppleTV5,3":  return Type.AppleTV
+            
             case "i386", "x86_64":                          return Type.Simulator
             default:                                        return Type.Unknown
         }
@@ -129,6 +135,8 @@ public class Device {
                 }
             case 1366:
                 return Size.Screen12_9Inch
+            case 1920:
+                return Size.Screen1080pTV
             default:
                 return Size.UnknownSize
         }
